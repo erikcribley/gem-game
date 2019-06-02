@@ -36,6 +36,8 @@ function randomGem () {
 //     }
 // } 
 
+randomGem()
+
 //Reset function
 function reset() {
     randomNumber
@@ -46,6 +48,9 @@ function reset() {
 
 totalScore = 0;
 
+//Display total score in total-score div
+$('#total-score').html(totalScore);
+
 //Win-Loss conditions
 function gameOver () {
     if (totalScore === randomNumber) {
@@ -54,14 +59,14 @@ function gameOver () {
         reset()
     } else if (totalScore > randomNumber) {
         losses++;
-
+        $("#losses").html(losses)
         reset()
     }
-    }
 
-//Display total score in total-score div
-$('#total-score').html(totalScore);
+    console.log(randomNumber)
+}
 
+// click events
 $('#gem-1').on("click", function () {
     totalScore += (assign[0]);
     $('#total-score').html(totalScore);
@@ -81,25 +86,4 @@ $('#gem-4').on("click", function() {
     totalScore += (assign[3]);   
     $('#total-score').html(totalScore);
     gameOver()
-}); 
-
-
-randomGem()
-
-// click events
-
-
-//Win-Loss conditions
-function gameOver () {
-if (totalScore === randomNumber) {
-    wins++;
-    reset()
-} else if (totalScore > randomNumber) {
-    losses++;
-    reset()
-}
-}
-
-console.log(assign)
-console.log(totalScore)
-
+});
