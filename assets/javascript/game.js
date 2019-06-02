@@ -7,12 +7,11 @@ var totalScore = 0;
 //Generate random number
 var randomNumber = (Math.floor(Math.random() * 101)+ 19)
 
-//Display in random-number div
+//Display dynamic values
 $("#random-number").text(randomNumber)
 $("#wins").html(wins)
 $("#losses").html(losses)
 $('#total-score').html(totalScore)
-
 
 //Generate random gem values
 function randomGem () {
@@ -41,6 +40,7 @@ randomGem()
 //Reset function
 function reset() {
     totalScore = 0
+    $('#total-score').html(totalScore)
     randomNumber = (Math.floor(Math.random() * 101)+ 19)
     $("#random-number").text(randomNumber)
     assign = []
@@ -51,7 +51,7 @@ function reset() {
 function gameOver () {
     if (totalScore === randomNumber) {
         wins++;
-        $("#wins").html(wins)
+        $("#wins").html(wins);
         reset()
     } else if (totalScore > randomNumber) {
         losses++;
