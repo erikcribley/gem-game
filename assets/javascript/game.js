@@ -2,16 +2,16 @@
 var wins = 0;
 var losses = 0;
 var assign = []
-
-$("#wins").html(wins)
-$("#losses").html(losses)
+var totalScore = 0;
 
 //Generate random number
 var randomNumber = (Math.floor(Math.random() * 101)+ 19)
 
 //Display in random-number div
-var displayRandom = $("#random-number").text(randomNumber)
-
+$("#random-number").text(randomNumber)
+$("#wins").html(wins)
+$("#losses").html(losses)
+$('#total-score').html(totalScore)
 
 
 //Generate random gem values
@@ -40,16 +40,12 @@ randomGem()
 
 //Reset function
 function reset() {
-    randomNumber
-    assign = []
     totalScore = 0
+    randomNumber = (Math.floor(Math.random() * 101)+ 19)
+    $("#random-number").text(randomNumber)
+    assign = []
     randomGem()
 }
-
-totalScore = 0;
-
-//Display total score in total-score div
-$('#total-score').html(totalScore);
 
 //Win-Loss conditions
 function gameOver () {
@@ -62,8 +58,6 @@ function gameOver () {
         $("#losses").html(losses)
         reset()
     }
-
-    console.log(randomNumber)
 }
 
 // click events
