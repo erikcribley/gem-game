@@ -64,9 +64,9 @@ h1 {
     margin: 10px;
 }
 
-button {
-    width: 100px;
-    height: 100px;
+img {
+    height: 65px;
+    width: 65px;
 }
 
 .score {
