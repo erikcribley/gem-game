@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CRYSTALSCOLLECTOR!!!!!</title>
+        <title>KrYsTaLzKoLLeKtEr!!!!!</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="assets/css/reset.css">
@@ -11,32 +11,33 @@
     <body> 
         <h1>KrYsTaLzKoLLeKtEr!!!!!</h1>     
         <div id="instructions">
-            <p> 
+            <p class="instr"> 
                 You will be given a random number at the start of the game.
             </p>
-            <p>
+            <p class="instr">
                 There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
                 final score.
             </p>
-            <p>
+            <p class="instr">
                 You win the game by matching your total score to the random number. You lose the game if your total score
                 goes above the random number.
             </p>
-            <p>
+            <p class="instr">
                 The value of each crystal is hidden from you until you click on it.
             </p>
-            <p>
+            <p class="instr">
                 Each time when the game starts the game will change the values of each crystal.
             </p>
         </div>
         <div id="random-number"></div>
         <div id="win-loss"> 
             <p id ="win-loss-alert"></p>
-            <p>
+            <p class= "side">
                 Wins:
             </p>
             <p id="wins"> </p>
-            <p>
+            <br>
+            <p class= "side">
                 Losses:
             </p>
             <p id="losses"></p>
@@ -47,10 +48,10 @@
             <button id="gem-3"><img scr="assets/images/yellow.png" alt="yellow gem"></button>
             <button id="gem-4"><img scr="assets/images/green.png" alt="green gem"></button>
         </div>
-        <p>
+        <p class= "score">
             Your total score is:
         </p>
-        <div id="total-score">        
+        <div class= "score" id="total-score">        
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
