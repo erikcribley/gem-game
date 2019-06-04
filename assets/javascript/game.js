@@ -7,7 +7,7 @@ var totalScore = 0;
 //Generate random number
 var randomNumber = (Math.floor(Math.random() * 101)+ 19)
 
-//Display dynamic values
+//Display in HTML
 $("#random-number").text(randomNumber)
 $("#wins").html(wins)
 $("#losses").html(losses)
@@ -19,21 +19,6 @@ function randomGem () {
         assign.push(Math.floor(Math.random() * 12) + 1)
     }
 }
-
-//check if array contains at least one odd number
-// function odd () {
-//     if (assign.includes(1,3,5,7,9,11)) {
-//         var gem1 = assign[0]  
-//         var gem2 = assign[1]  
-//         var gem3 = assign[2]  
-//         var gem4 = assign[3] 
-//     } else {
-//         assign = []
-//         for(i = 0; i < 4; i++) {
-//             assign.push(Math.floor(Math.random() * 12) + 1)
-//         }
-//     }
-// } 
 
 //call randomGem function
 randomGem()
