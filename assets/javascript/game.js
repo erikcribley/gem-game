@@ -13,10 +13,13 @@ $("#wins").html(wins)
 $("#losses").html(losses)
 $('#total-score').html(totalScore)
 
-//Generate random gem values
+//Generate unique random gem values
 function randomGem () {
-    for(i = 0; i < 4; i++) {
-        assign.push(Math.floor(Math.random() * 12) + 1)
+    while (assign.length < 4) {
+        var rand = (Math.floor(Math.random() * 12) + 1)
+        if(assign.indexOf(rand) < 0) {
+            assign.push(rand)
+        }
     }
 }
 
