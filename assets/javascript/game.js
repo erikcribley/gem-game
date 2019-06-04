@@ -35,9 +35,10 @@ function randomGem () {
 //     }
 // } 
 
+//call randomGem function
 randomGem()
 
-//Reset function
+//Reset
 function reset() {
     totalScore = 0
     $('#total-score').html(totalScore)
@@ -51,10 +52,12 @@ function reset() {
 function gameOver () {
     if (totalScore === randomNumber) {
         wins++;
+        $('#win-loss-alert').text("YOU WON!!!")
         $("#wins").html(wins);
         reset()
     } else if (totalScore > randomNumber) {
         losses++;
+        $('#win-loss-alert').text("you lost...")
         $("#losses").html(losses)
         reset()
     }
